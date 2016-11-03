@@ -1,26 +1,51 @@
 <!doctype html>
-<html>
+<html ng-app="eco-app">
 <head>
+
   <meta charset="UTF-8">
-  <title>Risk Insights</title>
+  <title>Green</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-  <!-- *plugin 'userev' concat your vendor css -->
-  <!-- build:css css/vendor.css -->
-  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.css"/>
-  <link rel="stylesheet" href="vendor/bootstrap/bootstrap-theme.min.css"/>
-  <!-- endbuild -->
-
   <!-- *plugin 'userev' concat your dev css -->
-  <!-- build:css css/main.css -->
-  <link rel="stylesheet" href="css/main.css"/>
+  <!-- build:css css/style.css -->
+  <link rel="stylesheet" href="css/style.css"/>
   <!-- endbuild -->
 
 </head>
 <body>
-<header>
-  
-</header>
-<div class="wrapper">
+  <div class="main" ng-controller="dataCtrl">
+    <div class="header">
+      <div class="header resize">
+        <div class = "logo">
+          <h1>
+            <a href="/" title="Home"><span>GREEN</span>ZAP<br></a>
+            <span class="slogan">Put your slogan here</span>
+          </h1>
+        </div><!--End logo-->
+        <div class="nav-panel clearfix">
+          <div class="menu">
+            <ul>
+              <li class="current"><a href="#/" title="Home">Home</a></li>
+              <li><a href="#services" title="services">Services</a></li>
+              <li><a href="#aboutUs" title="About Us">About Us</a></li>
+              <li><a href="#contactUs" title="Contact Us">Contact Us</a></li>
+            </ul>
+          </div>
+          <!--End menu-->
+          <div class="search">
+            <form id="form1" name="form1" method="post" action="#">
+              <label><input type="text" name="q" class="keywords" id="text-to-find" placeholder="search...">
+                <input type="image" name="b" class="buton" src="images/search.gif">
+              </label>
+            </form>
+          </div>
+          <!--End search-->
+        </div>
+      </div><!--end  header_resize-->
+      <div class= "header_img_resize">
+        <img src="images/img_main.jpg" width="970" height="338" alt="green zap technology">
+      </div><!-- End header_img_resize-->
+    </div><!--End header-->
+
 

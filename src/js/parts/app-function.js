@@ -1,10 +1,4 @@
 
-/*
-include parts like: //= part.js
-*/
-
-
-
 
 $(".menu ul li").on("click", function(){
 
@@ -46,3 +40,4 @@ $(".menu ul li").on("click", function(){
 
 
     });
+
