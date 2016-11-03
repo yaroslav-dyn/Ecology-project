@@ -1,7 +1,6 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
 var sass = require('gulp-sass');
-var useref = require('gulp-useref');
 var del  = require('del');
 var rigger = require('gulp-rigger');
 
@@ -24,7 +23,6 @@ gulp.task('fonts-build', function(){
 //build html with Dependencies
 gulp.task('html-build', function () {
     return gulp.src('src/*.html')
-        .pipe(useref())
         .pipe(gulp.dest('public/'));
 });
 //build data
@@ -55,7 +53,7 @@ gulp.task('build',
     'html-build',
     'fonts-build',
     'img-build',
-    'css-build',
+    'css-build'
 ]);
 
 // Clean public
