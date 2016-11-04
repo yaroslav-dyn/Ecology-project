@@ -17,42 +17,41 @@
 <body>
   <div class="main" ng-controller="dataCtrl">
     <div class="header">
-      <div class="header resize">
-        <div class = "logo">
-          <h1>
-            <a href="/" title="Home"><span>GREEN</span>ZAP<br></a>
-            <span class="slogan">Put your slogan here</span>
-          </h1>
-        </div><!--End logo-->
-        <div class="nav-panel clearfix">
-          <div class="menu">
-            <ul>
-              <li class="current"><a href="#/" title="Home">Home</a></li>
-              <li><a href="#services" title="services">Services</a></li>
-              <li><a href="#aboutUs" title="About Us">About Us</a></li>
-              <li><a href="#contactUs" title="Contact Us">Contact Us</a></li>
-            </ul>
+      <div class="logo resize">
+        <h1>
+          <a href="/" title="Home" ng-cloak><span>{{siteNameF}}</span>{{siteNameB}}<br></a>
+          <span class="slogan" ng-bind="siteSlogan"></span>
+        </h1>
+      </div>
+      <div class="header-inner">
+        <div class="header resize">
+          <div class="nav-panel clearfix">
+            <div class="menu">
+              <ul>
+                <li class="current"><a href="#/" title="Home">Home</a></li>
+                <li><a href="#news" title="News">News</a></li>
+                <li><a href="#aboutUs" title="About Us">About Us</a></li>
+                <li><a href="#contactUs" title="Contact Us">Contact Us</a></li>
+              </ul>
+            </div>
+            <!--End menu-->
+            <div class="search">
+              <form id="form1" name="form1" method="post" action="#">
+                <label><input type="text" name="q" class="keywords" id="text-to-find" placeholder="search...">
+                  <input type="image" name="b" class="button" src="images/search.png">
+                </label>
+              </form>
+            </div>
+            <!--End search-->
           </div>
-          <!--End menu-->
-          <div class="search">
-            <form id="form1" name="form1" method="post" action="#">
-              <label><input type="text" name="q" class="keywords" id="text-to-find" placeholder="search...">
-                <input type="image" name="b" class="buton" src="images/search.gif">
-              </label>
-            </form>
-          </div>
-          <!--End search-->
         </div>
-      </div><!--end  header_resize-->
-      <div class= "header_img_resize">
-        <img src="images/img_main.jpg" width="970" height="338" alt="green zap technology">
-      </div><!-- End header_img_resize-->
+        <!--end  header_resize--></div>
     </div><!--End header-->
 <div ng-view></div>
 
 <div class="footer">
   <div class = "footer_resize">
-    <p class="lfp">Copyright � <a href="#">Domain Name.</a> All Rights Reserved</p>
+    <p class="lfp">Simple one page app</p>
     <p class="rfp">Get More <a href="#">Free CSS Templates</a> by <a href="#">HotWebsiteTemplates</a></p>
     <div class ="clear"></div>
   </div>
