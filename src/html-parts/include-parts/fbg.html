@@ -1,39 +1,33 @@
-<div class = "fbg">
-  <div class = "fbg resize">
+<div class = "fbg" ng-controller="functionCtrl">
+  <div class = "fbg resize clearfix">
+
     <div class = "block"> 	   <!-- Block 1-->
-      <h2>Image Gallery</h2>
-      <img src = "images/gallery_1.gif" alt = "" width = "68" height = "68">
-      <img src = "images/gallery_2.gif" alt = "" width = "68" height = "68">
-      <img src = "images/gallery_3.gif" alt = "" width = "68" height = "68">
-      <img src = "images/gallery_4.gif" alt = "" width = "68" height = "68">
-      <img src = "images/gallery_5.gif" alt = "" width = "68" height = "68">
-      <img src = "images/gallery_6.gif" alt = "" width = "68" height = "68">
-      <div class="clear"></div>
+
+      <div class="small-gallery clearfix" ng-if="currentLocation != statusLocationGallery">
+        <h2><a class="referral-a" href="#gallery">Image Gallery</a></h2>
+        <div ng-repeat="item in imgItem | limitTo:6">
+          <img ng-src="{{item.itemImgSrc}}" alt="" />
+        </div>
+      </div>
+
       <h2>Contact Info</h2>
       <p>
         <strong>Phone:</strong> +1234567<br>
         <strong>Adress:</strong> 123 Put Your Address Here<br>
         <strong>Email:</strong> green@mail.com<br>
-        <a href = "#"> contact page</a>
+        <a href = "#contactUs"> contact page</a>
       </p>
     </div>
+
     <div class = "block">     <!-- Block 2-->
-      <h2>Lorem Ipsum</h2>
-      <p>Lorem ipsum dolor Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum.
-        Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu posuere nunc justo tempus leo.
-        Donec mattis, purus nec placerat bibendum, dui pede condimentum odio, ac blandit ante orci ut diam.</p>
-      <ul >
-        <li ><a href = "#">• consequat molestie</a></li>
-        <li ><a href="#">• sem justo</a></li>
-        <li ><a href="#">• semper</a></li>
-        <li class=""><a href="#">• magna sed purus</a> </li>
-      </ul>
+      <h2><a class="referral-a" href="#postPage" ng-click="showIndex(randomInteger);">{{posts[randomInteger].header}}</a></h2>
+      <p>{{posts[randomInteger].description}}</p>
     </div>
+
     <div class = "block">     <!-- Block 3-->
-      <h2>Lorem Ipsum</h2>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu posuere nunc justo tempus leo. llorem, eu posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum odio, ac blandit ante orci ut diam.</p>
-      <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id urna. <a href = "#">Learn more...</a></p>
+      <h2><a class="referral-a" href="#postPage" ng-click="showIndex(randomIntegerOther);">{{posts[randomIntegerOther].header}}</a></h2>
+      <p>{{posts[randomIntegerOther].description}}</p>
     </div>
-    <div class ="clear"></div>
+
   </div><!--end fbg_resize-->
 </div><!--End fbg-->

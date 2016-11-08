@@ -7,13 +7,13 @@
 		</div>
 
     <div class="left">
-			<div class="post" ng-repeat="post in posts">
+			<div class="post" ng-repeat="post in posts | limitTo:3">
 				<h2 class="hyper-news">{{post.header}}</h2>
 
 				<div class="date-news-block">
 					<span>{{post.date}}</span>
 				</div>
-				<a class="post-img-cont" href="#postPage" ng-click="showIndex($index);">
+				<a class="post-img-cont current-post" href="#postPage" ng-click="showIndex($index);">
 					<img class="img-responsive" ng-src="{{post.urlImage}}" alt="">
 					<div class="overlay-block">read more</div>
 				</a>
@@ -22,9 +22,9 @@
 					{{post.description}}
 				</p>
 
-				<p><a href="#postPage" ng-click="showIndex($index);">Read more</a></p>
+				<p><a class="current-post" href="#postPage" ng-click="showIndex($index);">Read more</a></p>
 			</div>
-
+			<h6 class="text-center read-all"><a class="referral-a" href="#news">Read All</a></h6>
 		</div>
 
     <div class="right" id="sidebar">

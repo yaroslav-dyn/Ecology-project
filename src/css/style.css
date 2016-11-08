@@ -3,6 +3,7 @@
 body{
     width: 100%;
     background-color: #fcf6ee;
+    overflow-x: hidden;
 }
 p.clear, .clear {
 	clear:both;
@@ -162,8 +163,9 @@ h1 .slogan {
 
             /*Body*/
 .body{
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .body .hyper-news,.body h2 {
@@ -193,7 +195,7 @@ h1 .slogan {
 
 .body a{
   color: #97c950;
-  text-decoration: underline;
+  text-decoration: none;
 }
 .body img {
     float: left;
@@ -279,7 +281,8 @@ h1 .slogan {
 }
 			/*FBG*/
 .fbg{
-	border-top: 1px solid #dcdad8
+	border-top: 1px solid #dcdad8;
+  min-height: 408px;
 }
 .fbg strong{
     font-weight: bold;
@@ -336,21 +339,21 @@ h1 .slogan {
 }
 
 /*for contact_us.html form*/
-#contactform{
+.contact-form{
 	padding: 5px;
     margin: 0;
 }
-#contactform *{
+.contact-form *{
 	color: #F00;
 }
-#contactform ul li{
+.contact-form ul li{
     display: block;
     clear: both;
     background: none;
     margin: 0;
     padding: 0;
 }
-#contactform label{
+.contact-form label{
     width: 110px;
     color: #666;
     padding: 10px 0;
@@ -358,7 +361,7 @@ h1 .slogan {
     font: normal 12px Arial, Helvetica, sans-serif;
     text-transform: capitalize;
 }
-#contactform input.text{
+.contact-form input.text{
     width: 480px;
     border: 1px solid #c0c0c0;
     margin: 2px 0;
@@ -367,7 +370,7 @@ h1 .slogan {
     background: #fff;
     float: left;
 }
-#contactform textarea{
+.contact-form textarea{
     width: 480px;
     border: 1px solid #c0c0c0;
     margin: 2px 0;
@@ -375,10 +378,10 @@ h1 .slogan {
     background: #fff;
     float: left;
 }
-#contactform ul li.buttons{
+.contact-form ul li.buttons{
     margin: 5px 0;
 }
-#contactform li.buttons input{
+.contact-form li.buttons input{
     border: 1px solid #000000;
     background: #ea7d1b;
     padding: 10px;
@@ -397,3 +400,30 @@ p.response {
     width:auto;
 }
 
+/*validation*/
+.contact-form input.ng-invalid {
+  outline: 1px solid pink;
+}
+.contact-form input.ng-valid {
+  outline: 1px solid lightgreen;
+}
+
+.small-gallery img{
+  width: 68px;
+  height: 68px;
+
+}
+.small-gallery img:hover{
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  transform: scale(1.4);
+}
+.read-all{
+  margin: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
